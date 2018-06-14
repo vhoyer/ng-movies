@@ -7,12 +7,14 @@ import { ListComponent } from './components/list/list.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 import { DataService } from './services/data.service';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
