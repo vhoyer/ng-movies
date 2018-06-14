@@ -9,7 +9,7 @@ import { TMDbConfig } from '../interfaces/tmdb-config';
 export class DataService implements TMDbConfig {
   images: { base_url: string; secure_base_url: string; backdrop_sizes: string[]; logo_sizes: string[]; poster_sizes: string[]; profile_sizes: string[]; still_sizes: string[]; };
   change_keys: string[];
-  apiKey:string = '00000000000000000000000000000000';
+  apiKey:string = '6d132c5f70b936ab288082a9ca3522f1';
 
   constructor(public http:Http) {
     let raw = this.http.get(`https://api.themoviedb.org/3/configuration?api_key=${this.apiKey}`).toPromise();
@@ -23,5 +23,9 @@ export class DataService implements TMDbConfig {
   getData(){
     let raw = this.http.get(`https://api.themoviedb.org/3/movie/76341?api_key=${this.apiKey}&language=pt-BR`).toPromise()
     return raw.then(data => data.json() as Movie);
+  }
+
+  getPosterPath(image: string, sizeIndex: number = 0): string{
+    return `${this.images.secure_base_url}${this.images.poster_sizes[sizeIndex]}${image}`;
   }
 }
