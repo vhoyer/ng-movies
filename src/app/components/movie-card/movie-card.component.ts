@@ -11,7 +11,7 @@ export class MovieCardComponent implements OnInit {
 
   @Input() movie:Movie;
 
-  constructor(private data:DataService) { }
+  constructor(public data:DataService) { }
 
   ngOnInit() {
   }
