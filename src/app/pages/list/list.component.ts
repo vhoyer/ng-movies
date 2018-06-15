@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Movie } from '../../interfaces/movie';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
 
 @Component({
   selector: 'app-list',
