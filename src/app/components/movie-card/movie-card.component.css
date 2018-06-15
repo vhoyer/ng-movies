@@ -1,7 +1,21 @@
 .movie-card {
+    display: flex;
+    flex-flow: row nowrap;
+
+    overflow: hidden;
+
     border: 1px solid #ccc;
     border-radius: 4px;
 
     margin: 15px 0;
-    padding: 15px;
+}
+
+.body {
+    padding: 0 15px;
+}
+
+.title .small {
+    font-size: .7em;
+
+    color: #666;
 }

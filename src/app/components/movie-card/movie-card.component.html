@@ -1,8 +1,11 @@
 <div class="movie-card">
-  <img src="{{data.getPosterPath(movie.poster_path,1)}}" alt="{{movie.title}}: {{movie.tagline}}">
-  <h3>
-    {{movie.title}}
-    <span>{{movie.release_date}}</span>
-  </h3>
-  <p>{{movie.overview}}</p>
+  <img class='poster' src="{{data.getPosterPath(movie.poster_path,1)}}" alt="{{movie.title}}: {{movie.tagline}}">
+  <div class='body'>
+    <h3 class="title">
+      {{movie.title}}
+      <br>
+      <span class="small">{{movie.release_date}}</span>
+    </h3>
+    <p>{{movie.overview}}</p>
+  </div>
 </div>
