@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "sudo ngh --branch gh-pages --dir dist/ngMovies"
+    "deploy": "ng build --prod --base-href 'https://vhoyer.github.io/ng-movies/' && sudo ngh --branch gh-pages --dir dist/ngMovies"
   },
   "private": true,
   "dependencies": {
