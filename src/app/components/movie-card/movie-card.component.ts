@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../../interfaces/movie';
 import { DataService } from '../../services/data.service';
 
@@ -9,12 +9,10 @@ import { DataService } from '../../services/data.service';
 })
 export class MovieCardComponent implements OnInit {
 
-  movie:Movie;
+  @Input() movie:Movie;
 
   constructor(private data:DataService) { }
 
   ngOnInit() {
-    this.data.getData().then(d => console.log(this.movie = d));
   }
-
 }

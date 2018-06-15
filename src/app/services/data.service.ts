@@ -21,8 +21,7 @@ export class DataService implements TMDbConfig {
   }
 
   getData(){
-    let raw = this.http.get(`https://api.themoviedb.org/3/movie/76341?api_key=${this.apiKey}&language=pt-BR`).toPromise()
-    return raw.then(data => data.json() as Movie);
+    return this.http.get(`https://api.themoviedb.org/3/movie/76341?api_key=${this.apiKey}&language=pt-BR`);
   }
 
   getPosterPath(image: string, sizeIndex: number = 0): string{
