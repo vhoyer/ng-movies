@@ -21,7 +21,6 @@ export class ListComponent implements OnInit {
 
   onSearch(){
     this.source.getSearchResult(this.query).subscribe(data => {
-      console.log(data.json());
       this.movies = data.json().results;
     });
   }
