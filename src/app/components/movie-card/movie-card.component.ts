@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../../interfaces/movie';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,7 +11,7 @@ export class MovieCardComponent implements OnInit {
 
   @Input() movie:Movie;
 
-  constructor() { }
+  constructor(private data:DataService) { }
 
   ngOnInit() {
   }
