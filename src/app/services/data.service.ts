@@ -9,6 +9,8 @@ import { TMDbConfig } from '../interfaces/tmdb-config';
 export class DataService implements TMDbConfig {
   images: { base_url: string; secure_base_url: string; backdrop_sizes: string[]; logo_sizes: string[]; poster_sizes: string[]; profile_sizes: string[]; still_sizes: string[]; };
   change_keys: string[];
+
+  apiEndpoint:string = 'https://api.themoviedb.org/3/';
   apiKey:string = '6d132c5f70b936ab288082a9ca3522f1';
 
   constructor(public http:Http) {
@@ -20,8 +22,12 @@ export class DataService implements TMDbConfig {
     });
   }
 
+  getSearchResult(search){
+    return this.http.get(`${this.apiEndpoint}search/movie?api_key=${this.apiKey}&query=${search}`);
+  }
+
   getData(){
-    return this.http.get(`https://api.themoviedb.org/3/movie/76341?api_key=${this.apiKey}&language=pt-BR`);
+    return this.http.get(`${this.apiEndpoint}movie/76341?api_key=${this.apiKey}&language=pt-BR`);
   }
 
   getPosterPath(image: string, sizeIndex: number = 0): string{

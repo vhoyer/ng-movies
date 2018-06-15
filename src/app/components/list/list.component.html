@@ -1,5 +1,5 @@
 <form (submit)="onSearch()">
-  <input type="text" placeholder="Search">
+  <input type="text" placeholder="Search" [(ngModel)]="query" name="query">
   <button type="submit">procurar</button>
 </form>
 

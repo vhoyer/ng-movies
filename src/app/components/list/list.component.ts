@@ -10,6 +10,8 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
 })
 export class ListComponent implements OnInit {
 
+  query:string = '';
+
   movies:Movie[];
 
   constructor(private source:DataService) { }
@@ -18,10 +20,9 @@ export class ListComponent implements OnInit {
   }
 
   onSearch(){
-    this.source.getData().subscribe(data => {
-      this.movies = [];
-      this.movies[0] = data.json();
+    this.source.getSearchResult(this.query).subscribe(data => {
+      console.log(data.json());
+      this.movies = data.json().results;
     });
-    return false;
   }
 }
