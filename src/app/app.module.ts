@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './components/list/list.component';
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
-
 import { DataService } from './services/data.service';
+
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { ListComponent } from './pages/list/list.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
