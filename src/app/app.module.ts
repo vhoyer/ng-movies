@@ -16,6 +16,7 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { ListComponent } from './pages/list/list.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 const appRoutes: Routes = [
   { path:'list', component: ListComponent },
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     ListComponent,
     MovieCardComponent,
     DetailsComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
