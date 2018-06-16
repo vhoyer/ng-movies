@@ -10,6 +10,7 @@ import { DataService } from './services/data.service';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { ListComponent } from './pages/list/list.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 const appRoutes: Routes = [
   { path:'list', component: ListComponent },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     ListComponent,
     MovieCardComponent,
-    DetailsComponent
+    DetailsComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
