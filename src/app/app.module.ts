@@ -4,6 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import fontawesome from '@fortawesome/fontawesome'
+import solid from '@fortawesome/fontawesome-free-solid'
+// Add the icon to the library so you can use it in your page
+fontawesome.library.add(solid)
+ 
 import { AppComponent } from './app.component';
 import { DataService } from './services/data.service';
 

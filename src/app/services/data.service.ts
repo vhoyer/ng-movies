@@ -23,11 +23,11 @@ export class DataService implements TMDbConfig {
   }
 
   getSearchResult(search){
-    return this.http.get(`${this.apiEndpoint}search/movie?api_key=${this.apiKey}&query=${search}&language=pt-BR`);
+    return this.http.get(`${this.apiEndpoint}search/movie?api_key=${this.apiKey}&query=${search}`);
   }
 
   getData(id){
-    return this.http.get(`${this.apiEndpoint}movie/${id}?api_key=${this.apiKey}&language=pt-BR`);
+    return this.http.get(`${this.apiEndpoint}movie/${id}?api_key=${this.apiKey}`);
   }
 
   getPosterPath(image: string, sizeIndex: number = 0): string {

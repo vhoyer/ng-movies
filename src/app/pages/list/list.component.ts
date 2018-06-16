@@ -10,8 +10,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  query:string = '';
-
   movies:Movie[];
 
   constructor
@@ -22,15 +20,9 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.response.queryParams.subscribe(data => {
-      this.query = data.q;
-
-      this.source.getSearchResult(this.query).subscribe(data => {
+      this.source.getSearchResult(data.q).subscribe(data => {
         this.movies = data.json().results;
       });
     });
-  }
-
-  onSearch(){
-      this.router.navigate(['/list'], { queryParams: { 'q': this.query } })
   }
 }
