@@ -13,7 +13,7 @@ import { DetailsComponent } from './pages/details/details.component';
 
 const appRoutes: Routes = [
   { path:'list', component: ListComponent },
-  { path:'detail', component: DetailsComponent }
+  { path:'detail/:id', component: DetailsComponent }
 ];
 
 @NgModule({

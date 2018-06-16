@@ -8,6 +8,8 @@
     border-radius: 4px;
 
     margin: 15px 0;
+
+    max-height: 231px;
 }
 
 .body {
