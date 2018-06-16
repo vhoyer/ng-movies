@@ -1,8 +1,9 @@
-<h1>ng-movies</h1>
-<nav>
-  <a routerLink='/'>Home</a>
-  <a routerLink='list' routerLinkActive='active'>List</a>
-</nav>
+<div class="navbar">
+  <a routerLink=''><h1>ng-movies</h1></a>
+  <nav>
+    <a routerLink='list' routerLinkActive='active'>List</a>
+  </nav>
+</div>
 
 <form (submit)="onSearch()">
   <input type="text" placeholder="Search" [(ngModel)]="query" name="query">

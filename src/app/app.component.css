@@ -1,0 +1,60 @@
+.navbar,
+.navbar nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 5rem;
+
+    background-color: #0A2E36;
+    color: rgb(40, 139, 73);
+}
+
+.navbar + * {
+    margin-top: 6rem;
+}
+
+.navbar,
+.navbar nav {
+    padding: 0 1em;
+}
+a:visited,
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav a {
+    padding: 1em .6em;
+    color: #fff;
+}
+nav a::after {
+    content: "";
+    display: block;
+
+    position: relative;
+    top: 0;
+
+    height: 2px;
+
+    margin: 0 auto;
+    width: 0;
+
+    background-color: #09A129;
+
+    transition: width .2s ease-out;
+}
+nav a:hover::after {
+    width: 80%;
+}
+nav a.active::after {
+    width: 40%;
+}
+nav a.active:hover::after{
+    width: 100%;
+}
