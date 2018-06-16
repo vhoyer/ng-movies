@@ -8,17 +8,16 @@
     <br>
     <small class="small">{{movie.original_title}}</small>
   </h2>
+  <label>
+    Aprovação:
+    <progress value="{{movie.vote_average}}" max="10"></progress>
+  </label>
   <p>
     {{movie.overview}}
   </p>
 </ng-template>
 <ng-template #loading>
-  <div class="sk-folding-cube">
-    <div class="sk-cube1 sk-cube"></div>
-    <div class="sk-cube2 sk-cube"></div>
-    <div class="sk-cube4 sk-cube"></div>
-    <div class="sk-cube3 sk-cube"></div>
-  </div>
+  <app-preloader></app-preloader>
 </ng-template>
 
 <!--
